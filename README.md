@@ -1,88 +1,117 @@
 # EX-02: Cross-Platform Prompting – Evaluating Diverse Techniques in AI-Powered Text Summarization
-## AIM :
+## AIM
 
-To evaluate and compare the effectiveness of different prompting techniques (Zero-shot, Few-shot, Chain-of-Thought, and Role-based prompting) across multiple AI platforms such as OpenAI ChatGPT, Google Gemini, Anthropic Claude, and Microsoft Copilot for the task of text summarization.
+To evaluate and compare the effectiveness of different prompting techniques such as Zero-shot prompting, Few-shot prompting, Chain-of-Thought prompting, and Role-based prompting across multiple AI platforms like OpenAI ChatGPT, Google Gemini, Anthropic Claude, and Microsoft Copilot for the task of technical text summarization.
 
-## SCENARIO :
+## INTRODUCTION
 
-A content curation team for an educational platform needs short and simple summaries of technical research papers for undergraduate students. A 500-word article on “The Basics of Blockchain Technology” is summarized using different prompting strategies on multiple AI platforms.
+Artificial Intelligence language models are becoming important tools in education, research, and content creation. These AI systems can understand large amounts of text and generate summaries in a short time. Educational platforms especially use AI-generated summaries to help students quickly understand difficult topics and research papers. Prompt engineering plays a major role in improving the quality of AI responses. Different prompting methods influence the accuracy, readability, coherence, and simplicity of the generated output.
 
-### The summaries are evaluated based on:
+In this experiment, a technical article on “The Basics of Blockchain Technology” was summarized using different prompting techniques on multiple AI platforms. Blockchain technology is a decentralized digital ledger system used for secure transaction recording. Since the topic contains technical terms and concepts, it is useful for evaluating the summarization capability of AI models.
 
-Accuracy
-Coherence
-Simplicity
-Speed
-User Experience
-## PROMPTING TECHNIQUES USED :
+## The experiment focuses on comparing the performance of AI platforms based on five important factors:
+
+* Accuracy
+* Coherence
+* Simplicity
+* Speed
+* User Experience
+
+The purpose of this experiment is to identify which combination of AI platform and prompting technique produces the most effective educational summary for undergraduate students.
+
+## PROMPTING TECHNIQUES USED
 ### 1. Zero-Shot Prompting
 
-The AI is directly asked to summarize without examples.
+Zero-shot prompting is a basic prompting technique where the AI model is directly instructed to perform a task without providing examples. The model relies only on its pre-trained knowledge to generate the response.
 
-Example Prompt:
-“Summarize the following article on Blockchain Technology in simple language for undergraduate students.”
+### Example Prompt:
+
+“Summarize the following article on Blockchain Technology in simple language.”
+
+### Advantages:
+Fast response generation
+Easy to use
+Requires less prompt preparation
+### Disadvantages:
+Sometimes misses important details
+Output quality may vary
 
 ### 2. Few-Shot Prompting
 
-The AI is first given sample summaries and then asked to summarize the new article.
+Few-shot prompting provides one or more example summaries before giving the actual task. This helps the AI understand the expected format, style, and tone of the output.
 
-Example Prompt:
-“Here are two examples of good summaries. Now summarize the blockchain article in a similar format.”
+### Example Prompt:
 
+“Here are two example summaries. Generate a summary for the blockchain article using the same format.”
+
+### Advantages:
+Better formatting consistency
+Improved readability
+More structured summaries
+### Disadvantages:
+Requires additional examples
+Slightly increases prompt length
 ### 3. Chain-of-Thought Prompting
 
-The AI is encouraged to reason step-by-step before generating the summary.
+Chain-of-Thought prompting encourages the AI model to think step-by-step before generating the final response. This improves logical reasoning and coherence.
 
-Example Prompt:
-“Read the article carefully, identify the key concepts, simplify them step-by-step, and then provide a concise summary.”
+### Example Prompt:
 
+“Read the article carefully, identify the main concepts step-by-step, simplify them, and then generate a concise summary.”
+
+### Advantages:
+Better logical flow
+Improved explanation quality
+More detailed summaries
+### Disadvantages:
+Slightly slower response generation
+Sometimes produces longer outputs
 ### 4. Role-Based Prompting
 
-The AI is assigned a specific role before answering.
+Role-based prompting assigns a specific role to the AI model before giving the task. The AI then generates responses according to the assigned role.
 
-Example Prompt:
-“You are an educational content writer preparing notes for first-year engineering students. Summarize the blockchain article in simple terms.”
+### Example Prompt:
 
-## SAMPLE ARTICLE SUMMARY GENERATED
-### Summary
+“You are an educational content writer preparing notes for undergraduate engineering students. Summarize the blockchain article in simple and understandable language.”
 
-Blockchain is a decentralized digital ledger used to securely record transactions across multiple computers. Each block contains transaction data and is connected to previous blocks using cryptographic techniques, making the system secure and difficult to alter. Blockchain technology is widely used in cryptocurrencies like Bitcoin, but it also has applications in healthcare, banking, and supply chain management. Its advantages include transparency, security, and decentralization, while challenges include high energy consumption and scalability issues.
+### Advantages:
+More audience-focused summaries
+Improved simplicity and readability
+Better educational value
+### Disadvantages:
+Depends on how clearly the role is defined
 
-## COMPARISON OF AI PLATFORMS :
-| Platform          | Accuracy  | Coherence | Simplicity | Speed     | User Experience         |
-| ----------------- | --------- | --------- | ---------- | --------- | ----------------------- |
-| OpenAI ChatGPT    | Excellent | Excellent | Excellent  | Fast      | Very User Friendly      |
-| Google Gemini     | Very Good | Good      | Good       | Very Fast | Good                    |
-| Anthropic Claude  | Excellent | Excellent | Very Good  | Moderate  | Clean Interface         |
-| Microsoft Copilot | Good      | Good      | Moderate   | Fast      | Integrated with Browser |
 
-## ANALYSIS OF PROMPTING TECHNIQUES :
+## SAMPLE SUMMARY GENERATED BY AI
 
-| Prompting Technique | Advantages                          | Disadvantages              |
-| ------------------- | ----------------------------------- | -------------------------- |
-| Zero-Shot           | Quick and simple                    | May miss important details |
-| Few-Shot            | Better formatting and consistency   | Requires example prompts   |
-| Chain-of-Thought    | Produces detailed logical summaries | Slightly slower            |
-| Role-Based          | More audience-focused and readable  | Depends on role clarity    |
+“Blockchain is a decentralized digital ledger technology used to record transactions securely across multiple computers. Each block contains transaction information and is connected to previous blocks using cryptographic methods, making the system secure and difficult to alter. Blockchain is mainly used in cryptocurrencies such as Bitcoin, but it also has applications in banking, healthcare, supply chain management, and digital identity verification. The major advantages of blockchain include transparency, security, decentralization, and data integrity. However, challenges such as high energy consumption, scalability issues, and implementation cost still exist.”
 
-OBSERVATIONS
-Role-based prompting produced the most student-friendly summaries.
-Chain-of-thought prompting improved logical flow and coherence.
-Few-shot prompting improved formatting consistency.
-Zero-shot prompting was the fastest but less detailed.
-ChatGPT and Claude produced the most accurate and coherent summaries overall.
-Gemini responded very quickly with concise outputs.
-Copilot worked efficiently for web-based summarization tasks.
+## COMPARISON OF AI PLATFORMS
 
-## RESULT :
+| AI Platform       | Prompting Technique | Accuracy  | Coherence | Simplicity | Speed     | User Experience |
+| ----------------- | ------------------- | --------- | --------- | ---------- | --------- | --------------- |
+| OpenAI ChatGPT    | Role-Based          | Excellent | Excellent | Excellent  | Fast      | Excellent       |
+| OpenAI ChatGPT    | Chain-of-Thought    | Excellent | Excellent | Very Good  | Moderate  | Excellent       |
+| Google Gemini     | Zero-Shot           | Good      | Good      | Good       | Very Fast | Good            |
+| Google Gemini     | Few-Shot            | Very Good | Good      | Good       | Very Fast | Good            |
+| Anthropic Claude  | Chain-of-Thought    | Excellent | Excellent | Very Good  | Moderate  | Very Good       |
+| Microsoft Copilot | Few-Shot            | Good      | Good      | Moderate   | Fast      | Good            |
 
-The experiment showed that both the AI platform and prompting strategy significantly affect the quality of text summarization.
+## OBSERVATIONS
 
-### Among the tested combinations:
+!. Role-based prompting generated the most understandable summaries for students.
+2. Chain-of-Thought prompting improved reasoning and logical structure.
+3. Few-shot prompting produced more organized summaries with consistent formatting.
+4. Zero-shot prompting was the fastest technique but less detailed compared to others.
+5. ChatGPT produced highly accurate and student-friendly summaries.
+6. Claude generated detailed and logically connected summaries.
+7. Gemini provided very quick responses and concise outputs.
+8. Copilot performed effectively for browser-based summarization tasks.
+9. The quality of summaries improved significantly when prompts were more specific and structured.
+10. Prompt engineering directly influenced the clarity and usefulness of AI-generated educational content.
 
-ChatGPT with Role-Based Prompting produced the best overall summary because it balanced accuracy, simplicity, coherence, and readability for undergraduate students.
-Claude with Chain-of-Thought Prompting generated highly detailed and logically structured summaries.
-Gemini provided the fastest responses.
-Copilot offered a convenient browser-integrated experience.
+## RESULT
 
-Therefore, Role-Based Prompting combined with ChatGPT was found to be the most effective approach for educational text summarization tasks.
+The experiment showed that both the AI platform and the prompting strategy greatly affect the quality of text summarization. Among all tested combinations, ChatGPT with Role-Based Prompting produced the best overall results because it generated accurate, coherent, simple, and student-friendly summaries while maintaining fast response speed and excellent user experience. Claude with Chain-of-Thought prompting also performed very well by generating highly logical and detailed summaries. Gemini provided the fastest responses, while Copilot offered good integration with web-based environments.
+
+Therefore, the experiment concludes that Role-Based Prompting combined with ChatGPT is the most effective approach for AI-powered educational text summarization tasks for undergraduate students.
